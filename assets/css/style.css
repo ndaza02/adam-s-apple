@@ -1,0 +1,147 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Hide scrollbar for carousel but keep functionality */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-marquee {
+    animation: marquee 20s linear infinite;
+}
+
+/* Pause animation on hover for better UX */
+.animate-marquee:hover {
+    animation-play-state: paused;
+}
+
+/* 3D Flip Animation */
+.perspective-1000 {
+    perspective: 1000px;
+}
+
+.transform-style-3d {
+    transform-style: preserve-3d;
+}
+
+.backface-hidden {
+    backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+    transform: rotateY(180deg);
+}
+
+@keyframes flip-left-periodic {
+
+    0%,
+    45% {
+        transform: rotateY(0);
+    }
+
+    50%,
+    95% {
+        transform: rotateY(-180deg);
+    }
+
+    100% {
+        transform: rotateY(-360deg);
+    }
+}
+
+.animate-flip-periodic {
+    animation: flip-left-periodic 25s infinite;
+}
+
+.animate-flip-delay-1 {
+    animation: flip-left-periodic 25s infinite;
+    animation-delay: 2s;
+}
+
+.animate-flip-delay-2 {
+    animation: flip-left-periodic 25s infinite;
+    animation-delay: 4s;
+}
+
+.animate-flip-delay-3 {
+    animation: flip-left-periodic 25s infinite;
+    animation-delay: 6s;
+}
+
+/* Light Mode Styles */
+html:not(.dark) body {
+    background-color: #f5f5f5;
+    color: #1a1a1a;
+}
+
+html:not(.dark) .bg-background {
+    background-color: #f5f5f5;
+}
+
+html:not(.dark) .bg-card {
+    background-color: #ffffff;
+}
+
+html:not(.dark) .text-white {
+    color: #1a1a1a;
+}
+
+html:not(.dark) .text-muted {
+    color: #6b7280;
+}
+
+html:not(.dark) .border-white\/5 {
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+html:not(.dark) .bg-black\/50 {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+html:not(.dark) .bg-zinc-800 {
+    background-color: #e5e7eb;
+}
+
+html:not(.dark) .bg-zinc-900 {
+    background-color: #f3f4f6;
+}
+
+html:not(.dark) .text-zinc-400 {
+    color: #6b7280;
+}
+
+html:not(.dark) .text-zinc-500 {
+    color: #9ca3af;
+}
+
+html:not(.dark) .text-zinc-700 {
+    color: #374151;
+}
+
+html:not(.dark) .border-neutral-700 {
+    border-color: #d1d5db;
+}
+
+html:not(.dark) .border-neutral-800 {
+    border-color: #e5e7eb;
+}
+
+html:not(.dark) footer {
+    background-color: #e5e7eb;
+}
